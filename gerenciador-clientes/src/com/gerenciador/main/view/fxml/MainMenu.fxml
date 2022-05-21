@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox styleClass="window" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gerenciador.main.view.controller.MainMenu">
+	<children>
+		<!-- caixa de pesquisa -->
+		<HBox styleClass="section, pesquisa">
+			<TextField HBox.hgrow="ALWAYS" fx:id="inputBusca"/>
+			<Button HBox.hgrow="ALWAYS" text="pesquisar" onAction="#buscar"/>
+			<ComboBox HBox.hgrow="ALWAYS" />
+		</HBox>
+
+		<!-- sessão principal, com a tabela -->
+		<HBox styleClass="section, main" VBox.vgrow="ALWAYS">
+			<TableView HBox.hgrow="ALWAYS" fx:id="tblClientes">
+				<columnResizePolicy>
+					<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+				</columnResizePolicy>
+				<columns>
+					<TableColumn text="Nome" />
+					<TableColumn text="Refil" />
+					<TableColumn text="Última Troca" />
+					<TableColumn text="Próxima Troca" />
+					<TableColumn text="Endereço" />
+				</columns>
+			</TableView>
+		</HBox>
+
+		<HBox styleClass="section, options">
+			<Button HBox.hgrow="ALWAYS" text="Novo" onAction="#abrirTelaCadastro" />
+			<Button HBox.hgrow="ALWAYS" text="Remover" onAction="#removerSelecionado"/>
+			<Button HBox.hgrow="ALWAYS" text="Detalhes" onAction="#exibirDetalhes"/>
+		</HBox>
+
+	</children>
+</VBox>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox styleClass="window"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.gerenciador.main.view.controller.TelaCadastrarCliente">
+
+    <VBox styleClass="div, left">
+        <TilePane styleClass="line">
+            <HBox styleClass="box-radio">
+                <RadioButton text="P. Fisica" fx:id="rdPessoaFisica"/>
+                <RadioButton text="Empresa" fx:id="rdEmpresa"/>
+            </HBox>
+            <TextField promptText="nome" fx:id="inputNome"/>
+            <TextField promptText="cpf/cnpj" fx:id="inputCpfCnpj"/>
+        </TilePane>
+
+        <TilePane styleClass="line">
+            <TextField promptText="telefone" fx:id="inputTelefone"/>
+            <TextField promptText="celular" fx:id="inputCelular"/>
+            <TextField promptText="email" fx:id="inputEmail"/>
+        </TilePane>
+
+        <TilePane styleClass="line">
+            <TextField promptText="rua" fx:id="inputRua"/>
+            <TextField promptText="bairro" fx:id="inputBairro"/>
+            <TextField promptText="número" fx:id="inputNumero"/>
+        </TilePane>
+
+        <TilePane styleClass="line">
+            <TextField promptText="cidade" fx:id="inputCidade"/>
+            <TextField promptText="UF" fx:id="inputEstado"/>
+        </TilePane>
+        <HBox styleClass="text-area">
+            <TextArea promptText="observação" fx:id="inputObservacao" HBox.hgrow="ALWAYS"/>
+        </HBox>
+
+    </VBox>
+
+    <FlowPane styleClass="div, right">
+        <!--
+        <HBox styleClass="boxPesquisa, line">
+            <TextField promptText="digite o modelo do refil ou do purificador" HBox.hgrow="ALWAYS"/>
+            <Button HBox.hgrow="ALWAYS" text="buscar"/>
+            <Button HBox.hgrow="ALWAYS" text="novo"/>
+        </HBox>
+        <TableView HBox.hgrow="ALWAYS" fx:id="tblPurificadores">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn text="Modelo Purificador"/>
+                <TableColumn text="Modelo Refil"/>
+            </columns>
+        </TableView>
+                -->
+
+    </FlowPane>
+
+</HBox>
+

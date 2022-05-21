@@ -1,0 +1,26 @@
+.window {
+	-fx-alignment: top-center;
+	-fx-padding: 20.0px;
+	-fx-column-halignment: center;
+	-fx-pref-width: 800.0px;
+	-fx-spacing: 10.0px;
+}
+
+.line {
+	-fx-pref-width: infinity;
+	-fx-pref-height: 30.0px;
+	-fx-spacing: 5.0px;
+}
+
+.div-radio {
+	-fx-spacing: 50.0px;
+}
+
+TextField {
+	-fx-pref-width: 255.0px;
+}
+
+TextArea {
+	-fx-pref-width: 800.0px;
+}
+

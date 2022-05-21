@@ -1,0 +1,45 @@
+.window {
+    -fx-spacing: 50px;
+    -fx-padding: 50px;
+    -fx-alignment: center;
+}
+
+.div {
+    -fx-max-width: 900px;
+    -fx-max-height: 940px;
+    -fx-pref-width: infinity;
+    -fx-pref-height: infinity;
+}
+
+.left {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.box-radio {
+	-fx-spacing: 30px;
+	-fx-alignment: center;
+}
+
+.line {
+    -fx-max-width: 860px;
+    -fx-pref-width: 860px;
+	-fx-pref-height: 30.0px;
+	-fx-orientation: horizontal;
+	-fx-alignment: center;
+    -fx-hgap: 5px;
+	-fx-max-columns: 3;
+	-fx-pref-tile-width: 283px;
+}
+.left TextField {
+    -fx-max-width: 860px;
+}
+
+.left TextArea {
+    -fx-max-width: 860px;
+    -fx-pref-width: infinity;
+}
+
+.right {
+    -fx-background-color: blue;
+}

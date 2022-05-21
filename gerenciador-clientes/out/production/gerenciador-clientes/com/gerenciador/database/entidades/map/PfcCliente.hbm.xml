@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.gerenciador.database.entidades">
+
+	<class name="PfcCliente" table="pfc_clientes" abstract="true">
+	
+		<id name="codCliente" column="cod_cliente" type="integer"/>
+		
+		<property name="nome" column="nome" type="string"/>
+		
+		<property name="observacao" column="observacao" type="string" />
+		
+		<property name="email" column="email" type="string"/>
+		
+		<property name="numeroTelefone" column="numero_telefone" type="string"/>
+		
+		<property name="numeroCelular" column="numero_celular" type="string"/>
+		
+		<property name="tipCliente" column="tip_cliente" type="string"/>
+		
+		<property name="cpfCnpj" column="cpf_cnpj" type="string" />
+		
+		<many-to-one name="pfcEndereco" class="PfcEndereco" column="cod_endereco" unique="true" not-null="false" cascade="all" lazy="no-proxy"/>
+			
+		<set name="pfcPurificadores" inverse="true" fetch="select" lazy="true">
+			<key>
+				<column name="cod_cliente" />
+			</key>
+			<one-to-many class="PfcPurificador" />
+		</set>
+			
+	<!--
+		<joined-subclass name="PfcPessoaFisica" table="pfc_pessoas_fisicas" extends="PfCliente" lazy="true">
+			<key column="cod_cliente" />
+		  			
+		  	<property name="cpf" column="cpf"/> 
+		  	
+		</joined-subclass>
+			
+		<joined-subclass name="PfcPessoaJuridica" table="pfc_pessoas_juridicas" extends="PfCliente">
+			<key column="cod_empresa"/>
+		  		
+		  	<property name="cnpj" column="cnpj"/> 
+		  		
+		  	<property name="pessoaContato" column="pessoa_contato"/>
+		  	
+		</joined-subclass>
+	 -->
+		
+	</class>
+	
+</hibernate-mapping>

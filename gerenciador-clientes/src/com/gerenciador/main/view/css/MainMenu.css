@@ -1,0 +1,45 @@
+.window {
+	-fx-alignment: top-center;
+	-fx-padding: 20.0px;
+	-fx-column-halignment: center;
+	-fx-pref-width: 800.0px;
+	-fx-spacing: 10.0px;
+}
+
+.section {
+	-fx-pref-width: infinity;
+}
+
+.pesquisa {
+	-fx-pref-height: 30.0px;
+	-fx-spacing: 10.0px;
+}
+
+.pesquisa TextField {
+	-fx-pref-width: 415.0px;
+	-fx-pref-height: infinity;
+}
+
+.pesquisa Button {
+	-fx-pref-width: 125.0px;
+	-fx-pref-height: infinity;	
+}
+
+.pesquisa ComboBox {
+	-fx-pref-width: 200.0px;
+	-fx-pref-height: infinity;
+}
+
+.main {
+	-fx-pref-height: 450.0px;
+}
+
+.options {
+	-fx-spacing: 10.0px;
+	-fx-max-height: 30.0px;
+}
+
+.options Button {
+	-fx-pref-height: 30.0px;
+	-fx-max-width: infinity;
+}

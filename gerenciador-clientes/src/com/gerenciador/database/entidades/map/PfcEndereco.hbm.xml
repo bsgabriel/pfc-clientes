@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.gerenciador.database.entidades">
+
+	<class name="PfcEndereco" table="pfc_enderecos">
+	
+		<id name="codEndereco" column="cod_endereco" type="integer" />
+		
+		<property name="rua" column="rua" type="string" />
+		
+		<property name="bairro" column="bairro" type="string" />
+		
+		<property name="cidade" column="cidade" type="string" />
+		
+		<property name="uf" column="uf" type="string" />
+		
+		<property name="numero" column="numero" type="integer" />
+
+<!-- 		<one-to-one name="pfcEndereco" class="PfcEndereco" cascade="save-update"/> -->
+<!-- 		<one-to-one name="codEndereco" class="PfcEndereco" constrained="true"/>	 -->
+
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.gerenciador.database.entidades">
+
+	<class name="PfcModeloPurificador" table="pfc_modelos_purificadores">
+	
+		<id name="codModelo" column="cod_modelo_purificador" type="integer" />
+		
+		<property name="nomeModelo" column="nome_modelo" type="string" />
+		
+		<property name="qtdLitros" column="qtd_litros" type="java.math.BigDecimal" />
+		
+		<property name="descricao" column="descricao" type="string" />
+		
+	</class>
+	
+</hibernate-mapping>

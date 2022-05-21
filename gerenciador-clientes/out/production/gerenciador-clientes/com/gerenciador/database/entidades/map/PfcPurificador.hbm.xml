@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.gerenciador.database.entidades">
+
+	<class name="PfcPurificador" table="pfc_purificadores">
+	
+		<id name="codPurificador" column="cod_purificador" type="integer"/>
+					
+		<property name="codCliente" column="cod_cliente" type="integer"/>
+		
+		<property name="dtaUltimaTroca" column="dta_ultima_troca" type="date"/>
+		
+		<property name="dtaProximaTroca" column="dta_proxima_troca" type="date"/>
+		
+		<many-to-one class="com.gerenciador.database.entidades.PfcModeloRefil" name="pfcModeloRefil">
+			<column name="cod_modelo_refil"/>
+		</many-to-one>
+			
+		<many-to-one class="com.gerenciador.database.entidades.PfcModeloPurificador" name="pfcModeloPurificador">
+			<column name="cod_modelo_purificador" unique="false"/>
+		</many-to-one>
+		
+		<many-to-one name="pfcCliente" class="PfcCliente" fetch="select" lazy="no-proxy" insert="false" update="false">
+			<column name="cod_cliente" />
+		</many-to-one>
+		
+	</class>
+	
+</hibernate-mapping>

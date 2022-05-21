@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox styleClass="window" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.gerenciador.main.view.controller.TelaCadastrarCliente">
+
+	<HBox styleClass="line">
+		<TextField promptText="nome" fx:id="inputNome" />
+		<TextField promptText="cpf/cnpj" fx:id="inputCpfCnpj" />
+		<HBox styleClass="div-radio">
+			<RadioButton text="P. Fisica" fx:id="rdPessoaFisica" />
+			<RadioButton text="Empresa" fx:id="rdEmpresa" />
+		</HBox>
+	</HBox>
+
+	<HBox styleClass="line">
+		<TextField promptText="telefone" fx:id="inputTelefone" />
+		<TextField promptText="celular" fx:id="inputCelular" />
+		<TextField promptText="email" fx:id="inputEmail" />
+	</HBox>
+
+	<HBox styleClass="line">
+		<TextField promptText="cidade" fx:id="inputCidade" />
+		<TextField promptText="UF" fx:id="inputEstado" />
+	</HBox>
+
+	<HBox styleClass="text-area">
+		<TextArea promptText="observação" fx:id="inputObservacao" />
+	</HBox>
+
+</VBox>
+
